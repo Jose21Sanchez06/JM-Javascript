@@ -1,0 +1,58 @@
+<script>
+/linea que permite escribir/
+document.write('Hola, mi nombre es Jose Maria Sanchez Mandujano, pertenezco al Grupo P del Noveno Periodo');//escribo texto hola
+document.write('<br>');//escribo una etiqueta html de salto de linea en el texto.
+
+document.write('Este es mi primer programa con javascript en este curso de Taller de Diseño para Videojuegos');
+document.write('<br>');
+document.write('<br>');
+document.write('hagamos operaciones');
+document.write('<br>');
+document.write('<br>');
+
+/creo variables/
+var radiocirculo;
+var basemenortrapecio;
+var basemayortrapecio;
+var alturatrapecio;
+var circunpentagono;
+
+/pido datos en un dialogo del explorador/
+radiocirculo=prompt('dame el radio del circulo','');
+basemayortrapecio=prompt('dame la longitud de la base mayor del trapecio','');
+basemenortrapecio=prompt('dame la longitud de la base menor del trapecio','');
+alturatrapecio=prompt('dame la altura del trapecio','');
+circunpentagono=prompt('dame la circunferencia del pentagono','');
+
+/convierto valores a valores numericos para poder hacer operaciones/
+radiocirculo=parseInt(radiocirculo);
+basemayortrapecio=parseInt(basemayortrapecio);
+basemenortrapecio=parseInt(basemenortrapecio);
+alturatrapecio=parseInt(alturatrapecio);
+circunpentagono=parseInt(circunpentagono);
+
+/hago operaciones/
+//hago calculo del area del circulo
+var areacirculo=((radiocirculo * radiocirculo) * 3.1416);
+//hago calculo del area del trapecio
+var areatrapecio=(((basemayortrapecio + basemenortrapecio) * alturatrapecio) / 2);
+//calculo lado de triangulo recto para calcular area de hexagono
+var ladotriangulorec=((0.588 * circunpentagono) * 2);
+//hago calculo del apotema del pentagono basado en su circunferencia
+var apotemapentagono=(circunpentagono * 0.809);
+//hago calculo del area del pentagono
+var areapentagono=(((5 * ladotriangulorec) * apotemapentagono) / 2); 
+
+/escribo resultados/
+document.write('El area del circulo es: ');
+document.write(areacirculo);
+document.write('<br>');
+document.write('<br>');
+document.write('El area del trapecio es: ');
+document.write(areatrapecio);
+document.write('<br>');
+document.write('<br>');
+document.write('El area del pentagono es: ');
+document.write(areapentagono);
+
+</script>
